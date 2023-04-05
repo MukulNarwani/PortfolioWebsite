@@ -48,14 +48,11 @@ app.listen(PORT, host, () => {
 
 app.use(express.static(join(__dirname, 'public_html')));
 app.use('/uploaded',express.static(join(__dirname, 'photos')));
-// app.get('/image-list' ((req,res) => {
-//     res.writeHead(200,{
-//         "Content-Type":"application/json",
-//     })
-// }))
+
 app.get('/image-list',function(req,res){
     var photoNames=[]
-    fs.readdirSync('/home/mukulnarwani/code/Website/photos').forEach(file => {
+    console.log(__dirname)
+    fs.readdirSync(__dirname+'/photos').forEach(file => {
         photoNames.push(file)
       });
     let send_json=JSON.stringify(photoNames);
