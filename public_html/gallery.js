@@ -14,11 +14,13 @@ async function getPhotos(){
 
 function displayphotos(photo_list){
 		for (var photo of  photo_list){
-			console.log( photo)
+			// console.log( photo)
+			parentDiv=document.createElement('div')
 			img_tag=document.createElement('img')
 			gallery=document.getElementById('gallery')
 			img_tag.src='uploaded/' + photo
-			gallery.appendChild(img_tag)
+			parentDiv.appendChild(img_tag)
+			gallery.appendChild(parentDiv)
 		}
 }	
 
