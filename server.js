@@ -51,7 +51,7 @@ app.use('/uploaded',express.static(join(__dirname, 'photos')));
 
 app.get('/image-list',function(req,res){
     var photoNames=[]
-    console.log(__dirname)
+    // console.log(__dirname)
     fs.readdirSync(__dirname+'/photos').forEach(file => {
         photoNames.push(file)
       });

@@ -13,14 +13,18 @@ async function getPhotos(){
 }
 
 function displayphotos(photo_list){
-		for (var photo of  photo_list){
+	i =1;
+	for (var photo of photo_list){			
+		
 			// console.log( photo)
-			parentDiv=document.createElement('div')
+			parentDiv=document.getElementsByClassName('column')
+			// console.log(parentDiv[i%3])
 			img_tag=document.createElement('img')
 			gallery=document.getElementById('gallery')
 			img_tag.src='uploaded/' + photo
-			parentDiv.appendChild(img_tag)
-			gallery.appendChild(parentDiv)
+			parentDiv[i%3].appendChild(img_tag)
+			// gallery.appendChild(parentDiv)
+			i++;
 		}
 }	
 
