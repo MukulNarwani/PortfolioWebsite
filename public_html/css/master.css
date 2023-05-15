@@ -6,12 +6,12 @@
 
 body {
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     background-color:var(--color-1);
     font-family: sans-serif;
-    align-content: space-around;
+    /* align-content: space-around; */
 
 }
 :root{
@@ -27,7 +27,7 @@ body {
     justify-items: center;
     margin: 0;
     padding: 0;
-    height: 100px;
+    height: 50px;
 }
 hr{
    grid-column-start:2;
@@ -48,13 +48,14 @@ hr{
     justify-content: right;
     align-items: center;
     text-decoration: none;
-    gap:10px;
+    /* gap:10px; */
 }
 
 .navbar a{
     text-decoration: none;
     color:aliceblue;
-    /* padding: 25px; */
+    font-size:  90%;
+    padding: 10px 12.5px;
 }
 
 .navbar a.active{
